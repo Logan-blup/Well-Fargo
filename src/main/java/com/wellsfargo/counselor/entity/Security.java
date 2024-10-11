@@ -14,7 +14,7 @@ public class Security {
     private long securityId;
 
     @Column(nullable = false)
-    private String firstName;
+    private String portfolioId;
 
     @Column(nullable = false)
     private String name;
@@ -35,8 +35,8 @@ public class Security {
 
     }
 
-    public Security(String firstName, String name, String category, String purchasePrice, String purchaseDate, String quantity) {
-        this.firstName = firstName;
+    public Security(String portfolioId, String name, String category, String purchasePrice, String purchaseDate, String quantity) {
+        this.portfolioId = portfolioId;
         this.name = name;
         this.category = category;
         this.purchasePrice = purchasePrice;
@@ -48,12 +48,12 @@ public class Security {
         return securityId;
     }
 
-    public String getFirstName() {
-        return firstName;
+    public String getportfolioId() {
+        return portfolioId;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+    public void setportfolioId(String portfolioId) {
+        this.portfolioId = portfolioId;
     }
 
     public String getName() {

@@ -14,6 +14,9 @@ public class Client {
     private long clientId;
 
     @Column(nullable = false)
+    private String advisorId;
+
+    @Column(nullable = false)
     private String firstName;
 
     @Column(nullable = false)
@@ -32,7 +35,8 @@ public class Client {
 
     }
 
-    public Client(String firstName, String lastName, String address, String phone, String email) {
+    public Client(String advisorId, String firstName, String lastName, String address, String phone, String email) {
+        this.advisorId = advisorId;
         this.firstName = firstName;
         this.lastName = lastName;
         this.address = address;
@@ -42,6 +46,14 @@ public class Client {
 
     public Long getclientId() {
         return clientId;
+    }
+
+    public String getAdvisorId() {
+        return advisorId;
+    }
+
+    public void setadvisorId(String advisorId) {
+        this.advisorId = advisorId;
     }
 
     public String getFirstName() {
